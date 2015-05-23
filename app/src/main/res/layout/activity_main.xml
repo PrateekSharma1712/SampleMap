@@ -1,0 +1,44 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".MainActivity">
+
+    <fragment
+        android:id="@+id/mapView"
+        android:name="com.google.android.gms.maps.MapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/searchAddressArea" />
+
+    <RelativeLayout
+        android:id="@+id/searchAddressArea"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/locateButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+
+            android:text="Locate" />
+
+        <EditText
+            android:id="@+id/searchText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:hint="Type pincode or address"
+            android:padding="5dp"
+            android:layout_alignTop="@id/locateButton"
+            android:layout_alignBottom="@id/locateButton"
+            android:layout_toLeftOf="@id/locateButton"
+            android:layout_toStartOf="@id/locateButton"
+            android:layout_alignBaseline="@id/locateButton"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>
